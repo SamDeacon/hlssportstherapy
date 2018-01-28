@@ -1,0 +1,29 @@
+.cta-button{
+    background: $brand-pink;
+    color: white;
+    padding: 1.2em 2em;
+    display: inline-block;
+    font-size:0.925em;
+    min-width: 170px;
+    text-align: center;
+    transition: all 1s ease;
+    &:hover{
+        background-color: $brand-blue-light;
+    }
+}
+
+.cta-ghost-outline{
+    border: 1px solid $brand-grey-footer;
+    color: $brand-grey-footer;
+    padding: 0.85em 1.4em;
+    display: inline-block;
+    font-size:0.925em;
+    min-width: 140px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    &:hover{
+        border: 1px solid $brand-blue-light;
+        color: $brand-blue-light;
+    }
+}

@@ -1,0 +1,146 @@
+    .the-footer .page-header-container{
+        background: $brand-grey-footer;
+        @include clearfix;
+        position: relative;
+        .container{
+            padding-bottom: 0;
+            @include clearfix;
+        }
+    }
+
+.the-footer{
+    background: $brand-grey-footer;
+    padding: 22px 0 40px;
+    color: white;
+    @include clearfix;
+    .menu-top-menu-container{
+        color: rgba(#ddd, 0.75);
+        ul.sub-menu{
+            display: none!important;
+        }
+    }
+    .brand{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+    .footer-widgets{
+        float: right;
+        clear: right;
+        text-align: left;
+        width: calc(100% - 200px);
+        max-width: 895px;
+        padding-top: 30px;
+        .widget{
+            width: 30%;
+            float: left;
+            position: relative;
+            padding-left: 60px;
+            &.address{
+                width: 40%;
+            }
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            span{
+                color: rgba(#ddd, 0.9);
+                font-size: 0.85em;
+                line-height: 1.45em;
+                strong{
+                    color: $brand-pink;
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .the-footer{
+        .footer-widgets{
+            .widget{
+                min-height: 55px;
+                padding-bottom: 20px;
+                &.phone{
+                    width: 24%;
+                }
+                &.email{
+                    width: 36%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .the-footer{
+        .footer-widgets{
+            .widget{
+                &.phone{
+                    width: 44%;
+                }
+                &.email{
+                    width: 56%;
+                }
+                &.address{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .the-footer{
+        .menu-top-menu-container{
+            color: #eee;
+        }
+        .brand{
+            padding-top: 10;
+            padding-bottom: 40px;
+            display: block;
+            position: relative;
+        }
+        .footer-widgets{
+            width: 100%;
+            float: none;
+            clear: both;
+            .widget{
+                min-width: 200px;
+                &.phone{
+
+                }
+                &.email{
+                }
+                &.address{
+                }
+            }
+        }
+    }
+}
+
+.footer-credits{
+    background: $brand-grey-footer-dark;
+    color: rgba(#ddd, 0.75);
+    font-size: 85%;
+    padding: 10px 0;
+    @include clearfix;
+    a{
+        color: white;
+    }
+    a:hover{
+        color: $brand-pink;
+    }
+    span{
+        padding: 8px 0;
+        display: inline-block;
+        &.right{
+            float: right;
+            padding-left: 15px;
+        }
+    }
+}

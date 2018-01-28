@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Montserrat:200,200i,300,300i,400,400i,500,500i,600');
+
+$brand-pink: #d4195c;
+$brand-blue: #282b75;
+$brand-blue-light: #3587bd;
+$brand-green-dark-footer: #3f4e4b;
+$brand-black-font: #191920;
+$brand-grey-bg: #acac94;
+$brand-grey-footer: #17171a;
+$brand-grey-footer-dark: #111113;
+
+
+@mixin paragraph-font-family() {
+    font-family: 'Oswald', sans-serif;
+}
+
+@mixin heading-font-family() {
+    font-family: 'Oswald', sans-serif;
+}
+
+@mixin box-shadow() {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
