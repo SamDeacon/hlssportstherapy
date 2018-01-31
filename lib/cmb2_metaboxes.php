@@ -14,7 +14,7 @@ function cmb2_home_metaboxes() {
 	 */
 	$cmb = new_cmb2_box( array(
 		'id'            => 'test_metabox',
-		'title'         => __( 'Test Metabox', 'cmb2' ),
+		'title'         => __( 'Homepage Metaboxes', 'cmb2' ),
 		'object_types'  => array( 'page', ), // Post type
 		'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
 		'context'      => 'normal', //  'normal', 'advanced', or 'side'

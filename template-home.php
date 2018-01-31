@@ -9,6 +9,7 @@
 
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
+
 </div> 
 <div class="blue-bg white-text">
 <div class="container">
@@ -22,6 +23,34 @@
     </span>
 </p>
 </div> 
+</div>
+<div class="container intro-para about-sect">
+
+<?php 
+  $page_meta = get_post_meta( get_the_ID());
+  $page_1_link = get_permalink($page_meta['_home_link_1_url'][0]);
+  $page_1_text = $page_meta['_home_link_1_text'][0];
+  $page_2_link = get_permalink($page_meta['_home_link_2_url'][0]);
+  $page_2_text = $page_meta['_home_link_2_text'][0];
+  $about_text = $page_meta['_home_about'][0];
+  $about_img = $page_meta['_home_about_img_id'][0];
+  //echo '<pre>' . var_export($page_meta, true) . '</pre>';
+?>
+<div class="right-img mobile-only">
+  <?php echo wp_get_attachment_image($about_img, 'larger-landscape'); ?>
+</div>
+<div class="left-text">
+<div class="clearfix-me">
+<?php echo wpautop($about_text); ?>
+</div>
+</div>
+<div class="right-img desktop-only">
+  <?php echo wp_get_attachment_image($about_img, 'larger-landscape'); ?>
+</div>
+<div class="clear-both">
+<a href="<?php echo $page_1_link; ?>" class="cta-button"><?php echo $page_1_text; ?></a>
+<a href="<?php echo $page_2_link; ?>" class="cta-button-black"><?php echo $page_2_text; ?></a>
+</div>
 </div>
 <section class="services">
 <h2><strong>Treatments</strong> and Services</h2>

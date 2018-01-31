@@ -7,6 +7,19 @@
     min-width: 170px;
     text-align: center;
     transition: all 1s ease;
+    border: 1px solid $brand-pink;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $brand-blue-light;
+        border: 1px solid $brand-blue-light;
+    }
+}
+.cta-button-black{
+    @extend .cta-button;
+    background: transparent;
+    border: 1px solid $brand-grey-footer;
+    color: $brand-grey-footer;
+    min-width: 170px;
     &:hover{
         background-color: $brand-blue-light;
     }
@@ -26,4 +39,8 @@
         border: 1px solid $brand-blue-light;
         color: $brand-blue-light;
     }
+}
+
+.nav-links a{
+    @extend .cta-button;
 }
