@@ -26,6 +26,10 @@
       },
       });
     }
+    if($(".hide-this-cat").length !== 0) {
+      $(".hide-this-cat").addClass("displaynone");
+      $(".hide-this-cat").next("div").addClass("displaynone");
+    }
     if($(".testimony-slider").length !== 0) {
     $(".testimony-slider").slick({
       autoplay: true,

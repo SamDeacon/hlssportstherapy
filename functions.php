@@ -85,6 +85,7 @@ add_image_size( 'single-header', 1100, 500, true );
 add_image_size( 'homepage-box', 360, 360, true );
 add_image_size( 'blog-thumbnail', 360, 360, true );
 add_image_size( 'larger-landscape', 800, 540, true );
+add_image_size( 'larger-service-landscape', 800, 620, true );
 add_image_size( 'services-thumbnail', 400, 270, true );
 add_image_size( 'blog-thumbnail-small', 200, 200, true );
 }
@@ -100,6 +101,7 @@ function my_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_assets' );
+add_post_type_support( 'services', 'excerpt' );
 
 
 function excerpt($limit) {
@@ -127,6 +129,3 @@ function content($limit) {
   $content = str_replace(']]>', ']]&gt;', $content);
   return $content;
 }
-
-
-

@@ -117,3 +117,44 @@
         }
     }
 }
+
+.services-single{
+    header time{
+        display: none;
+    }
+    .content-left{
+        img{
+            max-width: 50%;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.services-single, .index-blog-single{
+    article{
+        font-size: 90%;
+        h1{
+            // font-size: 1.85em;
+            color: $brand-pink;
+            text-transform: uppercase;
+        }
+        h2{
+            color: $brand-blue-light;
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .services-single{
+        .content-left{
+            img{
+                max-width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

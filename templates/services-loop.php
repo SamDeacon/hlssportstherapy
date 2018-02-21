@@ -18,7 +18,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
   echo '<h3>';
   the_title();
   echo '</h3>';
-  the_content();
+  the_excerpt();
   echo '</div></a>';
 endwhile;
 wp_reset_query();

@@ -58,7 +58,7 @@
 <?php
 include_once('templates/services-loop.php');
 ?>
-      <a href="<?php echo home_url() ?>/services" class="cta-button">
+      <a href="<?php echo home_url() ?>/services-landing-page" class="cta-button">
         READ MORE
       </a>
       </div>

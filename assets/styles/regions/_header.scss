@@ -132,9 +132,19 @@
     }
 }
 
+
 .breadcrumbs{
     padding-top: 20px;
     color: white;
+    .displaynone{
+        display: none;
+    }
+    div{
+        display: initial;
+    }
+    .hide-this-cat{
+
+    }
     span{
         color: $brand-pink;
         a span{
@@ -148,7 +158,8 @@
     }
 }
 nav.nav-mobile{
-    padding: 1em 2em;
+    border-top: 1px solid #666;
+    padding: 20px 40px;
     max-width: 300px;
     position: absolute;
     z-index: 1001;
@@ -156,12 +167,39 @@ nav.nav-mobile{
     min-height: 100vh;
     left: -300px;
     transition: left 0.5s ease-in;
-    font-size: 0.9em;
+    font-size: 1em;
+    ul{
+        list-style: none;
+        padding-left: 0;
+        li{
+            margin-bottom: 12px;
+            margin-top: 0;
+            &.current-menu-item{
+                >a{
+                    color: $brand-pink;
+                }
+            }
+            &.menu-item-has-children{
+                >a{
+                    position: relative;
+                    &:after{
+                        content: '\2228';
+                        position: absolute;
+                        bottom: 4px;
+                        right: -12px;
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
     ul li ul li{
-        font-size: 0.9em;
+        font-size: 1em;
     }
     ul.sub-menu{
-        padding-top: 1em;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 0;
     }
 }
 body.show-nav-menu{
@@ -198,6 +236,7 @@ body.show-nav-menu{
         background-color: $brand-black-font;
         color: rgba(#fff, 0.7);
         position: relative;
+        transition: background-color 0.5s ease;
         .icon-link span{
             display: none;
             font-size: 0;
@@ -223,14 +262,15 @@ body.show-nav-menu{
                 bottom: 0;
                 left: 0;
                 margin: auto;
+                transition: background 0.45s ease-in;
                 background: rgba(#fff,0.45);
                 &:nth-of-type(1){
-                    background: rgba(#fff,0.3);
+                    background: rgba(#fff,0.25);
                     margin-top: 10px;
                 }
                 &:nth-of-type(3){
                     margin-bottom: 10px;
-                    background: rgba(#fff,0.6);
+                    background: rgba(#fff,0.65);
                 }
             }
             .nav-toggle{
@@ -238,8 +278,6 @@ body.show-nav-menu{
                 width: 30px;
                 display: block;
                 content: '';
-
-                // background: rgba(#fff,0.3);
             }
         }
     }
@@ -250,6 +288,21 @@ body.show-nav-menu{
         }
         .brand{
             margin: auto;
+        }
+    }
+    body.show-nav-menu{
+        .top-link-bar{
+            background-color: $brand-grey-footer;
+            .icon-link.nav-button{
+                .bar{
+                    &:nth-of-type(1){
+                        background: rgba(#fff,0.65);
+                    }
+                    &:nth-of-type(3){
+                        background: rgba(#fff,0.25);
+                    }
+                }
+            }
         }
     }
 }
