@@ -1565,3 +1565,93 @@ section.blog .cta-button, section.blog .cta-button-black, section.blog .nav-link
     width: 100%; }
   .wpcf7-form .wpcf7-form-control-wrap:nth-of-type(2n) {
     margin-left: 0; } }
+
+.page-template-template-availability section.services h2 {
+  color: #d4195c;
+  margin-bottom: 16px; }
+
+.avilability-tables {
+  display: flex; }
+  .avilability-tables .table-box {
+    width: 29%;
+    background: rgba(226, 198, 205, 0.719);
+    overflow: hidden;
+    vertical-align: top;
+    margin-right: 1%;
+    position: relative; }
+    .avilability-tables .table-box:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      z-index: 3;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: white; }
+  .avilability-tables .table-3 {
+    width: 40%;
+    margin-right: 0; }
+  .avilability-tables .header {
+    background: #d4195c;
+    color: white;
+    padding: 15px 8px;
+    text-align: center;
+    z-index: 4;
+    position: relative; }
+  .avilability-tables .cell-1, .avilability-tables .cell-2 {
+    float: left;
+    text-align: center;
+    padding: 15px 5px;
+    width: 50%; }
+  .avilability-tables .sub-headings {
+    background: #3587bd; }
+    .avilability-tables .sub-headings::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .avilability-tables .sub-headings .cell-1, .avilability-tables .sub-headings .cell-2 {
+      color: white; }
+  .avilability-tables .row-repeat {
+    width: 100%;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: flex; }
+    .avilability-tables .row-repeat::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .avilability-tables .row-repeat .cell-1, .avilability-tables .row-repeat .cell-2 {
+      border-bottom: 1px solid white; }
+    .avilability-tables .row-repeat:last-of-type .cell-1, .avilability-tables .row-repeat:last-of-type .cell-2 {
+      border-bottom: none; }
+  .avilability-tables .table-3:after {
+    left: auto;
+    right: 80px; }
+  .avilability-tables .table-3 .row-repeat .cell-1 {
+    width: calc( 100% - 80px);
+    text-align: left;
+    padding-left: 22px; }
+  .avilability-tables .table-3 .row-repeat .cell-2 {
+    width: 80px; }
+  .avilability-tables p {
+    margin-bottom: 0;
+    font-weight: 300; }
+
+@media screen and (max-width: 555px) {
+  .avilability-tables {
+    flex-wrap: wrap;
+    font-size: 90%; }
+    .avilability-tables .table-box {
+      width: 49%; }
+    .avilability-tables .table-1 {
+      margin-right: 1%; }
+    .avilability-tables .table-2 {
+      margin-right: 0;
+      margin-left: 1%; }
+    .avilability-tables .table-3 {
+      width: 100%;
+      margin-top: 2%; } }
